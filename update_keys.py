@@ -77,11 +77,11 @@ def clean_and_number_keys(keys):
     return numbered_keys
 
 def read_header(filename):
-    """Читает шапку файла (первые 6 строк)"""
+    """Читает шапку файла (первые 5 строк)"""
     try:
         with open(filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
-            header = lines[:6]  # Первые 6 строк
+            header = lines[:5]  # Первые 5 строк
             return header
     except Exception as e:
         print(f"Ошибка чтения шапки файла: {e}")
@@ -91,7 +91,7 @@ def update_file_with_keys(filename, header, keys):
     """Обновляет файл, сохраняя шапку и добавляя ключи с 7-й строки"""
     try:
         with open(filename, 'w', encoding='utf-8') as f:
-            # Записываем шапку
+            # Записываем шапку (первые 5 строк)
             f.writelines(header)
             # Добавляем пустую строку (6-я строка)
             f.write('\n')
