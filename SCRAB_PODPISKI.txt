@@ -1,1 +1,6 @@
+#profile-title: #Zapiski_VPN
+#profile-update-interval: 1
+#support-url: https://t.me/@zapiski_vpn_bot
+#announce: Нет преград, есть только решение!
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
 
